@@ -1,0 +1,32 @@
+﻿@page
+@model MyFE.Pages.Courses.IndexModel
+@{
+    ViewData["Title"] = "Courses";
+}
+
+<h1>Courses</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Category Name</th>
+            <th>Author</th>
+            <th>Description</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var article in Model.Courses)
+        {
+            <tr>
+                <td>@article.Title</td>
+                <td>@article.CategoryName</td>
+                <td>@article.Author</td>
+                <td>@article.Description</td>
+                <td>
+                    <a class="btn btn-primary" href="/Courses/Details/@article.CourseId">Read more</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

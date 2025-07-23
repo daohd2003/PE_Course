@@ -1,0 +1,16 @@
+﻿@page "{id:int}"
+@model MyFE.Pages.Courses.DetailsModel
+@{
+}
+<h2>@Model.Course?.Title</h2>
+<p><strong>Description:</strong>@Model.Course?.Description</p>
+<p><strong>CreatedAt:</strong>@Model.Course?.CreatedAt</p>
+
+@if (!string.IsNullOrEmpty(Model.SuccessMessage))
+{
+    <div class="alert alert-success mt-2">@Model.SuccessMessage</div>
+}
+
+<form method="post">
+    <button type="submit" class="btn btn-primary mt-2">Register</button>
+</form>
