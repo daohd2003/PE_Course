@@ -57,6 +57,7 @@ namespace Repositories
             return await _context.Courses
                      .Include(c => c.Category)
                      .Include(c => c.User)
+                     .Include(c =>c.Enrollments)
                      .FirstOrDefaultAsync(c => c.CourseId == id);
         }
 

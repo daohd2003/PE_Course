@@ -22,5 +22,6 @@ namespace BussinessObjects.DTOs
 
         public string CategoryName { get; set; }
         public string Author { get; set; }
+        public List<EnrollmentDTO> Enrollments { get; set; }
     }
 }
